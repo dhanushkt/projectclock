@@ -11,51 +11,51 @@ body
 
 .container
 {
-	width: 500px;
+	width: 300px;
 	margin: 100px auto;
 }
 
 .clock
 {
 	position: relative;
-	background-image: url('images/clock.jpeg');
-	width: 500px;
-	height: 500px;
+	background-image: url('images/dark_clock_face.png');
+	width: 300px;
+	height: 300px;
 	background-size: contain;
 }
 
 .h-hand
 {
 	position: absolute;
-	left: 240px;
-	top: 155px;
-	background-image: url('images/hour.png');
+	left: 145px;
+	top: 72px;
+	background-image: url('images/dark_clock_hour.png');
 	height: 100px;
-	width: 20px;
-	background-size: 20px 100px;
-	transform-origin: 50% 95%;
+	width: 35px;
+	background-size: 35px 100px;
+	transform-origin: 36% 80%;
 }
 
 .m-hand
 {
 	position: absolute;
-	left: 240px;
-	top: 80px;
-	background-image: url('images/min.png');
-	height: 180px;
+	left: 143px;
+	top: 46px;
+	background-image: url('images/dark_clock_min.png');
+	height: 105px;
 	width: 20px;
-	background-size: 20px 180px;
-	transform-origin: 50% 95%;
+	background-size: 20px 105px;
+	transform-origin: 53% 93%;
 }
 
 .s-hand
 {
 	position: absolute;
-	left: 237px;
-	top: 80px;
-	background-image: url('images/sec-e.png');
-	height: 180px;
-	width: 30px;
-	background-size: 30px 180px;
+	left: 140px;
+	top: 33px;
+	background-image: url('images/dark_clock_sec.png');
+	height: 120px;
+	width: 26px;
+	background-size: 26px 120px;
 	transform-origin: 45% 95%;
 }
