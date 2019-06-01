@@ -1,12 +1,15 @@
 <html>
 <head>
 	<link type="text/css" rel="stylesheet" href="style.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
 	<script type="text/javascript" src="analogClock.js"></script> 
 </head>
 <body onload="rClock()">
-
+<center>
 	<div class="container">
-		<div class="clock">
+		<div class="clock" id="clockFace">
 			<div class="h-hand" id="hour">
 			</div>
 			<div class="m-hand" id="min">
@@ -15,8 +18,30 @@
 			</div>
 		</div>
 	</div>
-	<div>
-		<h2>Good Night</h2>
+	<div class="transbox">
+		<h1 id="greet" style="color: white; font-family: Montserrat; font-size: 60px; text-shadow: 2px 2px 2px #000000;"></h1>
 	</div>
+	<a id="custom" onclick="custom();" href="#" class="btn left">
+		<span class="left icon fa fa-gear"></span>
+		<span style="font-family: Verdana;" class="right title"><span class="arrow-right"></span>Change Settings</span>
+	</a>
+	<div class="transbox-form" style="display: none; padding: 20px" id="show">
+			<div class="form-style-6">
+				<h1>Settings</h1>
+				<form>
+					<input id="hr" type="number" name="field1" placeholder="Change Hours (00-24)" />
+					<input id="m" type="number" name="field2" placeholder="Change Minutes (00-60)" />
+					<select id="clockstyle" onchange="changeclock()">
+							<option selected hidden>Select different clock</option>
+							<option>Dark</option>
+							<option>Classic</option>
+							<option>Vintage</option>
+					</select>
+					<!-- <textarea name="field3" placeholder="Type your Message"></textarea> -->
+					<input id="reset" onclick="hideIt()" type="button" value="CLOSE" />
+				</form>
+			</div>
+	</div>
+	</center>
 </body>
 </html>
