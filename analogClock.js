@@ -45,23 +45,32 @@ function cc(time){
   clockDivs[0].style.transform="rotate("+hour +"deg)";
   clockDivs[1].style.transform="rotate("+ time[1]*6 +"deg)";
   clockDivs[2].style.transform="rotate("+ time[2]*6 +"deg)";
-  if(cbg==0)
-  {
     var h=time[0];
-    var m=time[1];
-    var s=time[2];
     if(h>=5 && h<12){
-      document.body.style.backgroundImage = "url('images/bg/morning_blur.jpg')";
       document.getElementById("greet").innerHTML="Good Morning, "+uname;
     }else if(h>=12 && h<=16){
-      document.body.style.backgroundImage = "url('images/bg/afternoon_blur.jpg')";
       document.getElementById("greet").innerHTML="Good Afternoon, "+uname;
     }else if(h>16 && h<=19){
-      document.body.style.backgroundImage = "url('images/bg/evening_blur.jpg')";
       document.getElementById("greet").innerHTML="Good Evening, "+uname;
     }else if(h>19 || h<5){
-      document.body.style.backgroundImage = "url('images/bg/night_blur.jpg')";
       document.getElementById("greet").innerHTML="Good Night, "+uname;
+    }else{
+      //alert("oops");
+    }
+  if(cbg==0)
+  {
+    if(h>=5 && h<12){
+      document.body.style.backgroundImage = "url('images/bg/morning_blur.jpg')";
+      //document.getElementById("greet").innerHTML="Good Morning, "+uname;
+    }else if(h>=12 && h<=16){
+      document.body.style.backgroundImage = "url('images/bg/afternoon_blur.jpg')";
+      //document.getElementById("greet").innerHTML="Good Afternoon, "+uname;
+    }else if(h>16 && h<=19){
+      document.body.style.backgroundImage = "url('images/bg/evening_blur.jpg')";
+      //document.getElementById("greet").innerHTML="Good Evening, "+uname;
+    }else if(h>19 || h<5){
+      document.body.style.backgroundImage = "url('images/bg/night_blur.jpg')";
+      //document.getElementById("greet").innerHTML="Good Night, "+uname;
     }else{
       //alert("oops");
     }
